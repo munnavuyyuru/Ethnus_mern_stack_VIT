@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 1</title>
+  </head>
+  <body>
+    <center>
+      <h1>Reverse a number</h1>
+      <input id="inputUser" type="number" />
+      <button id="check">Calculate</button>
+      <h1 id="result"></h1>
+    </center>
+
+    <script>
+      document.getElementById("check").addEventListener("click", () => {
+        let a = document.getElementById("inputUser").value;
+
+        // Check if the input is a valid number
+        if (isNaN(a) || a === "") {
+          document.getElementById("result").innerHTML =
+            "Please enter a valid number.";
+          return;
+        }
+
+        // Convert the number to a string, reverse it, and convert it back to a number
+        const reverse = (num) =>
+          parseInt(num.toString().split("").reverse().join(""), 10);
+        document.getElementById("result").innerHTML = reverse(a);
+      });
+    </script>
+  </body>
+</html>

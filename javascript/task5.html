@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 5</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 12px;
+      }
+      .invalid {
+        border: 1px solid red;
+      }
+      .form {
+        justify-content: center;
+        float: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h3>Form Validation</h3>
+      <div class="form" id="form">
+        <form id="myForm" onsubmit="return validateForm()">
+          <p>
+            Name: <input type="text" id="name" />
+            <span id="nameError" class="error"></span>
+          </p>
+          <p>
+            Email: <input type="text" id="email" />
+            <span id="emailError" class="error"></span>
+          </p>
+          <p>
+            Website: <input type="text" id="website" />
+            <span id="websiteError" class="error"></span>
+          </p>
+          <p>
+            Message: <textarea id="message"></textarea>
+            <span id="messageError" class="error"></span>
+          </p>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </center>
+
+    <script>
+      function validateForm() {
+        let isValid = true;
+
+        // Name validation
+        let name = document.getElementById("name").value;
+        if (name === "") {
+          document.getElementById("nameError").innerText =
+            "This field is required";
+          document.getElementById("name").classList.add("invalid");
+          isValid = false;
+        } else {
+          document.getElementById("nameError").innerText = "";
+          document.getElementById("name").classList.remove("invalid");
+        }
+
+        // Email validation
+        let email = document.getElementById("email").value;
+        let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if (email === "") {
+          document.getElementById("emailError").innerText =
+            "A valid email address is required";
+          document.getElementById("email").classList.add("invalid");
+          isValid = false;
+        } else if (!emailPattern.test(email)) {
+          document.getElementById("emailError").innerText =
+            "A valid email address is required";
+          document.getElementById("email").classList.add("invalid");
+          isValid = false;
+        } else {
+          document.getElementById("emailError").innerText = "";
+          document.getElementById("email").classList.remove("invalid");
+        }
+
+        // Website validation
+        let website = document.getElementById("website").value;
+        let websitePattern =
+          /^(https?:\/\/)?([\w\d-]+\.)+[\w\d-]+(\/[\w\d-]*)*$/;
+        if (website === "") {
+          document.getElementById("websiteError").innerText =
+            "A valid URL is required";
+          document.getElementById("website").classList.add("invalid");
+          isValid = false;
+        } else if (!websitePattern.test(website)) {
+          document.getElementById("websiteError").innerText =
+            "A valid URL is required";
+          document.getElementById("website").classList.add("invalid");
+          isValid = false;
+        } else {
+          document.getElementById("websiteError").innerText = "";
+          document.getElementById("website").classList.remove("invalid");
+        }
+
+        // Message validation
+        let message = document.getElementById("message").value;
+        if (message === "") {
+          document.getElementById("messageError").innerText =
+            "This field is required";
+          document.getElementById("message").classList.add("invalid");
+          isValid = false;
+        } else {
+          document.getElementById("messageError").innerText = "";
+          document.getElementById("message").classList.remove("invalid");
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 2</title>
+  </head>
+  <body>
+    <center>
+      <h3>Enter any string</h3>
+      <h1>
+        <input type="text" id="typeInput" style="height: 20px; width: 100px" />
+      </h1>
+      <button onclick="sortAlphabetically()">Convert</button>
+      <h3>Expected Output:</h3>
+      <h1 id="answer" style="color: rgb(185, 117, 29)"></h1>
+    </center>
+
+    <script>
+      function sortAlphabetically() {
+        let input = document.getElementById("typeInput").value;
+
+        const sortString = (str) => str.split("").sort().join("");
+
+        document.getElementById("answer").innerHTML = sortString(input);
+      }
+    </script>
+  </body>
+</html>

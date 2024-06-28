@@ -4,118 +4,186 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>22BCE9108</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <style>
-      table,
-      th,
-      tr,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
+      body {
+        padding: 20px;
+      }
+      table {
+        margin-bottom: 20px;
+      }
+      h2,
+      h3,
+      h5 {
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <h2>VUYYURU VENKATA BHARGAV</h2>
-    <h3>VIT-AP CSE</h3>
-    <h3>2:30-4:30</h3>
-    <h5>HTML Tasks</h5>
-    <table>
-      <tr>
-        <td>Task Name</td>
-        <td>Task Link</td>
-      </tr>
-      <tr>
-        <td>Task 1</td>
-        <td>
-          <a href="./htmlTasks/task1.html">Task 1 link</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Task 2</td>
-        <td><a href="./htmlTasks/task2.html">Task 2 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 3</td>
-        <td><a href="./htmlTasks/task3.html">Task 3 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 4</td>
-        <td><a href="./htmlTasks/task4.html">Task 4 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 5</td>
-        <td><a href="./htmlTasks/task5.html">Task 5 link</a></td>
-      </tr>
-    </table>
-    <h5>CSS Tasks</h5>
-    <table>
-      <tr>
-        <td>Task Name</td>
-        <td>Task Link</td>
-      </tr>
-      <tr>
-        <td>Task 1</td>
-        <td>
-          <a href="./cssTasks/css task1.html">Task 1 link</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Task 2</td>
-        <td><a href="./cssTasks/css task2.html">Task 2 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 3</td>
-        <td><a href="./cssTasks/css task3.html">Task 3 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 4</td>
-        <td><a href="./cssTasks/css task4.html">Task 4 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 5</td>
-        <td><a href="./cssTasks/css task5.html">Task 5 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 6</td>
-        <td><a href="./cssTasks/css task6.html">Task 6 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 7</td>
-        <td><a href="./cssTasks/css task7.html">Task 7 link</a></td>
-      </tr>
-    </table>
-    <h5>BookStrap Tasks</h5>
-    <table>
-      <tr>
-        <td>Task Name</td>
-        <td>Task Link</td>
-      </tr>
-      <tr>
-        <td>Task 1</td>
-        <td>
-          <a href="./bootstrap/task1.html">Task 1 link</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Task 2</td>
-        <td><a href="./bootstrap/task2.html">Task 2 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 3</td>
-        <td><a href="./bootstrap/task3.html">Task 3 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 4</td>
-        <td><a href="./bootstrap/task4.html">Task 4 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 5</td>
-        <td><a href="./bootstrap/task5.html">Task 5 link</a></td>
-      </tr>
-      <tr>
-        <td>Task 6</td>
-        <td><a href="./bootstrap/task6.html">Task 6 link</a></td>
-      </tr>
-    </table>
+    <div class="container">
+      <h2 class="text-center">VUYYURU VENKATA BHARGAV</h2>
+      <h3 class="text-center">VIT-AP CSE</h3>
+      <h3 class="text-center">2:30-4:30</h3>
+
+      <h5>HTML Tasks</h5>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Task Name</th>
+            <th>Task Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Task 1</td>
+            <td><a href="./htmlTasks/task1.html">Task 1 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 2</td>
+            <td><a href="./htmlTasks/task2.html">Task 2 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 3</td>
+            <td><a href="./htmlTasks/task3.html">Task 3 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 4</td>
+            <td><a href="./htmlTasks/task4.html">Task 4 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 5</td>
+            <td><a href="./htmlTasks/task5.html">Task 5 link</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>CSS Tasks</h5>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Task Name</th>
+            <th>Task Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Task 1</td>
+            <td><a href="./cssTasks/css task1.html">Task 1 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 2</td>
+            <td><a href="./cssTasks/css task2.html">Task 2 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 3</td>
+            <td><a href="./cssTasks/css task3.html">Task 3 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 4</td>
+            <td><a href="./cssTasks/css task4.html">Task 4 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 5</td>
+            <td><a href="./cssTasks/css task5.html">Task 5 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 6</td>
+            <td><a href="./cssTasks/css task6.html">Task 6 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 7</td>
+            <td><a href="./cssTasks/css task7.html">Task 7 link</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>Bootstrap Tasks</h5>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Task Name</th>
+            <th>Task Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Task 1</td>
+            <td><a href="./bootstrap/task1.html">Task 1 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 2</td>
+            <td><a href="./bootstrap/task2.html">Task 2 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 3</td>
+            <td><a href="./bootstrap/task3.html">Task 3 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 4</td>
+            <td><a href="./bootstrap/task4.html">Task 4 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 5</td>
+            <td><a href="./bootstrap/task5.html">Task 5 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 6</td>
+            <td><a href="./bootstrap/task6.html">Task 6 link</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h5>JavaScript Tasks</h5>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Task Name</th>
+            <th>Task Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Task 1</td>
+            <td><a href="./javascript/task1.html">Task 1 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 2</td>
+            <td><a href="./javascript/task2.html">Task 2 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 3</td>
+            <td><a href="./javascript/task3.html">Task 3 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 4</td>
+            <td><a href="./javascript/task4.html">Task 4 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 5</td>
+            <td><a href="./javascript/task5.html">Task 5 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 6</td>
+            <td><a href="./javascript/task6.html">Task 6 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 7</td>
+            <td><a href="./javascript/task7.html">Task 7 link</a></td>
+          </tr>
+          <tr>
+            <td>Task 8</td>
+            <td><a href="./javascript/task8.html">Task 8 link</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

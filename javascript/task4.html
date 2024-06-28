@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript task 4</title>
+  </head>
+  <body>
+    <center>
+      <h2>Show Date and Time</h2>
+      <button onclick="showDate()">show date</button>
+      <h1 id="dateResult"></h1>
+
+      <button onclick="showTime()">show Time</button>
+      <h1 id="timeResult"></h1>
+    </center>
+
+    <script>
+      function showDate() {
+        let now = new Date();
+        let date = now.getDate();
+        let month = now.toLocaleString("default", { month: "long" });
+        let year = now.getFullYear();
+        document.getElementById(
+          "dateResult"
+        ).innerHTML = `${date}/${month}/${year}`;
+      }
+
+      function showTime() {
+        let now = new Date();
+        let timeString = now.toString();
+        document.getElementById("timeResult").innerHTML = timeString;
+      }
+    </script>
+  </body>
+</html>

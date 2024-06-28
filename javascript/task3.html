@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 3</title>
+  </head>
+  <body>
+    <center>
+      <div style="border: 1px solid black; padding: 20px; width: 250px">
+        <p>1st Number: <input type="number" id="firstNumber" /></p>
+        <p>2nd Number: <input type="number" id="secondNumber" /></p>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p>The Result Is:</p>
+        <h1 id="result"></h1>
+      </div>
+    </center>
+
+    <script>
+      function multiply() {
+        let num1 = parseFloat(document.getElementById("firstNumber").value);
+        let num2 = parseFloat(document.getElementById("secondNumber").value);
+        if (!isNaN(num1) && !isNaN(num2)) {
+          document.getElementById("result").innerHTML = num1 * num2;
+        } else {
+          document.getElementById("result").innerHTML =
+            "Please enter valid numbers.";
+        }
+      }
+
+      function divide() {
+        let num1 = parseFloat(document.getElementById("firstNumber").value);
+        let num2 = parseFloat(document.getElementById("secondNumber").value);
+        if (!isNaN(num1) && !isNaN(num2)) {
+          if (num2 !== 0) {
+            document.getElementById("result").innerHTML = num1 / num2;
+          } else {
+            document.getElementById("result").innerHTML =
+              "Cannot divide by zero.";
+          }
+        } else {
+          document.getElementById("result").innerHTML =
+            "Please enter valid numbers.";
+        }
+      }
+    </script>
+  </body>
+</html>
